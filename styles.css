@@ -1,0 +1,23 @@
+html {
+    font-family: "Nunito Sans";
+    color: rgb(42, 40, 40);
+}
+
+.inner-container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-self: space-between;
+}
+
+logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
