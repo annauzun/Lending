@@ -1,23 +1,44 @@
-html {
+body {
     font-family: "Nunito Sans";
     color: rgb(42, 40, 40);
 }
 
-.inner-container {
+header {
+    display: flex;
+    align-self: center;
+}
+
+.container {
     max-width: 1024px;
     width: 100%;
     margin: 0 auto;
 }
 
-header {
+#hero {
+    background-image: url("landing-materials/hero.jpg");
+    height: 800px;
+    background-position: center top;
+    background-size: cover;
+}
+
+.header {
     height: 120px;
     display: flex;
     align-items: center;
-    justify-self: space-between;
+    justify-content: space-between;
 }
 
-logo {
+#logo {
     width: 100px;
     height: 100px;
     object-fit: contain;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+}
+
+.navigation-item {
+    padding-right: 10px;
 }
