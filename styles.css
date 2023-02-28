@@ -1,3 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    --offset: 20px;
+}
+
 body {
     font-family: "Nunito Sans";
     color: rgb(42, 40, 40);
@@ -5,7 +13,6 @@ body {
 
 .container {
     max-width: 1024px;
-    width: 100%;
     margin: 0 auto;
 }
 
@@ -38,7 +45,7 @@ body {
     padding-right: 10px;
 }
 
-.icon {
+.header-icon {
     display: flex;
     align-items: center;
 }
@@ -86,4 +93,104 @@ body {
 
 .button:active {
     background-color: #bf490a;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0 calc(0px - var(--offset)/2);
+}
+
+.benefit {
+    background-color: #f2f0ef;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    width: calc(100%/3 - var(--offset));
+    margin: calc(var(--offset)/2);
+}  
+
+.benefit-title {
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+.benefit-text {
+    font-size: 16px;
+    margin-top: 20px;
+    text-align: left;
+    color: #78736d;
+    font-weight: 300;
+    line-height: 20px;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    background-color: #f97316;
+    color: white;
+    border-radius: 7px;
+    box-shadow: 1px 1px 5px #d6d3d1;
+    padding: 8px;
+}
+
+.about-us {
+    width: calc(100%/2 - var(--offset));
+    margin: calc(var(--offset)/2);    
+}
+
+#group-people {
+    background-image: url("landing-materials/group-people.jpg");
+    height: 300px;
+    background-position: center top;
+    background-size: cover;
+}
+
+h3 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    text-align: left; 
+}
+
+.about-us-text {
+    font-size: 16px;
+    margin-top: 20px;
+    text-align: left;
+    color: black;
+    font-weight: 300;
+    line-height: 20px;
+}
+
+.orange-section {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.orange-section-text {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 60px;
+}
+
+.input {
+    border: 1px solid #545251;
+    border-radius: 10px;
+    font-size: 20px;
+    padding-left: 5px;
+    margin-right: 10px;
+
 }
