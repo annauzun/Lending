@@ -1,9 +1,7 @@
-* {
-    box-sizing: border-box;
-}
-
 html {
     --offset: 20px;
+    --primary-color: #f97316;
+    --icon-color: #78716c;
 }
 
 body {
@@ -11,16 +9,20 @@ body {
     color: rgb(42, 40, 40);
 }
 
-.container {
-    max-width: 1024px;
-    margin: 0 auto;
-}
+/*hero section*/
 
 #hero {
     background-image: url("landing-materials/hero.jpg");
     height: 800px;
     background-position: center top;
     background-size: cover;
+    position: static;
+}
+
+.section {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .header {
@@ -41,31 +43,46 @@ body {
     align-items: center;
 }
 
-.navigation-item {
-    padding-right: 10px;
+a {
+    padding-right: 20px;
+    text-decoration: none;
+    color: var(--icon-color);
+}
+
+a:hover {
+    color: #44403c;
 }
 
 .header-icon {
     display: flex;
     align-items: center;
+    color: var(--icon-color);
+}
+
+.header-icon:hover {
+    color: #44403c;
 }
 
 .phone {
     margin-left: 10px;
 }
 
+.phone:hover {
+    color: #44403c;
+}  
+
 .hero-title {
-    font-size: 50px;
+    font-size: 62px;
     font-weight: 700;
     margin-top: 80px;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     max-width: 50%;
 }
 
 .hero-text {
     font-size: 20px;
     font-weight: 300;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     max-width: 40%;
     color: #57534e;
 }
@@ -78,13 +95,16 @@ body {
 }
 
 .button-large {
-    background-color: #f97316;
+    background-color: var(--primary-color);
     font-size: 20px;
 }
 
 .button-small {
-    background-color: #fed7aa;
-    font-size: 10px;
+    background-color: var(--primary-color);
+    font-size: 16px;
+    width: 100%;
+    color: white;
+    margin-top: 20px;
 }
 
 .button:hover {
@@ -95,18 +115,21 @@ body {
     background-color: #bf490a;
 }
 
+/*benefits*/
+
 h2 {
     font-size: 36px;
     font-weight: 700;
-    margin-top: 80px;
-    margin-bottom: 40px;
     text-align: center;
+    padding-top: 100px;
 }
 
 .row {
     display: flex;
     flex-wrap: nowrap;
     margin: 0 calc(0px - var(--offset)/2);
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .benefit {
@@ -118,6 +141,18 @@ h2 {
     width: calc(100%/3 - var(--offset));
     margin: calc(var(--offset)/2);
 }  
+
+.benefit-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 7px;
+    box-shadow: 1px 1px 5px #d6d3d1;
+    padding: 12px 8px 0px 8px;
+}
 
 .benefit-title {
     font-size: 18px;
@@ -133,26 +168,11 @@ h2 {
     line-height: 20px;
 }
 
-.icon {
-    width: 50px;
-    height: 50px;
-    background-color: #f97316;
-    color: white;
-    border-radius: 7px;
-    box-shadow: 1px 1px 5px #d6d3d1;
-    padding: 8px;
-}
+/*about us*/
 
 .about-us {
     width: calc(100%/2 - var(--offset));
     margin: calc(var(--offset)/2);    
-}
-
-#group-people {
-    background-image: url("landing-materials/group-people.jpg");
-    height: 300px;
-    background-position: center top;
-    background-size: cover;
 }
 
 h3 {
@@ -172,11 +192,17 @@ h3 {
     line-height: 20px;
 }
 
+#group-people {
+    background-image: url("landing-materials/group-people.jpg");
+    height: 300px;
+    background-position: center top;
+    background-size: cover;
+}
+
+/*input section*/
+
 .orange-section {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    justify-content: center;
+    background-color: #ffedd5;
 }
 
 .orange-section-text {
@@ -186,11 +212,135 @@ h3 {
     margin-bottom: 60px;
 }
 
+.input-section {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    padding-bottom: 150px;
+}
+
 .input {
-    border: 1px solid #545251;
+    border: 1px solid #d6d3d1;
     border-radius: 10px;
     font-size: 20px;
     padding-left: 5px;
     margin-right: 10px;
+    color: #d6d3d1;
+    outline: none;
+}
 
+/*reviews*/
+
+.grey-section {
+    background-color: #f2f0ef;
+}
+
+#reviews {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 70px;
+}
+
+.review {
+    width: 600px;
+    border-bottom: 1px solid #a5a3a2;
+    padding: 30px 0px 30px 0px;
+}
+
+.review-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.review-text {
+    font-weight: 300;
+    color: #44403c;
+    line-height: 20px;
+}
+
+/*rates*/
+
+#rates {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0px 120px 0px;
+}
+
+.rate {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;  
+    border: 1px solid #d6d3d1;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    flex-grow: 1;
+    width: calc(100%/3 - var(--offset));
+    margin: calc(var(--offset)/2);
+}
+
+.rate-title {
+    color: #ea580c;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.rate-price {
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.rate-details {
+    flex-grow: 1;
+    margin-top: 20px;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: var(--icon-color);
+    margin-bottom: 10px;
+}
+
+.mark {
+    color: #65a30d;
+    padding-right: 10px;
+}
+
+/*footer contacts*/
+
+footer {
+    background-color: #d6d3d1;
+    height: 120px;
+}
+
+.contacts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.contacts-phone {
+    display: flex;
+    align-items: center;
+    color: var(--icon-color);
+}
+
+.contacts-phone:hover {
+    color: #44403c;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+}
+
+.social-icon {
+    padding-left: 15px;
 }
